@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Blablawild</string>
+    <string name="action_settings">Settings</string>
+    <string name="search_text">Search</string>
+    <string name="departure">Departure</string>
+    <string name="destination">Destination</string>
+    <string name="date">Date</string>
+    <string name="_01_01_18">01/01/18</string>
+    <string name="search">Search</string>
+    <string name="search_an_itinerary">Search an itinerary</string>
+</resources>

@@ -8,4 +8,8 @@
     <string name="_01_01_18">01/01/18</string>
     <string name="search">Search</string>
     <string name="search_an_itinerary">Search an itinerary</string>
+    <string name="_31_12_1970_3_30pm">31/12/1970 3:30PM</string>
+    <string name="firstname">Firstname</string>
+    <string name="lastname">Lastname</string>
+    <string name="_19">$19</string>
 </resources>

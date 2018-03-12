@@ -36,6 +36,7 @@ public class VehicleActivity extends AppCompatActivity {
                 if (i == 0) {
                     editKilimeters.setVisibility(View.GONE);
                     editHours.setVisibility(View.GONE);
+                    editSpeed.setVisibility(View.GONE);
                     buttonSend.setEnabled(false);
                 }
                 else if (i ==1 ) {

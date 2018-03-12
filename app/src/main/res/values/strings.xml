@@ -12,4 +12,13 @@
     <string name="firstname">Firstname</string>
     <string name="lastname">Lastname</string>
     <string name="_19">$19</string>
+
+
+        <string-array name="spinner_vehicul">
+            <item>Please select</item>
+            <item>Car</item>
+            <item>Boat</item>
+            <item>Plane</item>
+        </string-array>
+
 </resources>

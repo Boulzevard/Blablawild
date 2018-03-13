@@ -66,6 +66,8 @@ public class ItinerarySearchActivity extends AppCompatActivity {
                 String departure = editDeparture.getText().toString();
                 EditText editDestination = findViewById(R.id.editText_destination);
                 String destination = editDestination.getText().toString();
+                EditText editdate = findViewById(R.id.editText_date);
+                String date = editdate.getText().toString();
 
                 if ((departure.length()<1) || (destination.length()<1)) {
                     Toast.makeText(ItinerarySearchActivity.this, "Please fill all cases", Toast.LENGTH_SHORT).show();
@@ -73,8 +75,8 @@ public class ItinerarySearchActivity extends AppCompatActivity {
                 else {
 
                     Intent intentSearch = new Intent(ItinerarySearchActivity.this, ItineraryListActivity.class);
-                    intentSearch.putExtra("message",departure);
-                    intentSearch.putExtra("message2",destination);
+                    SearchModel envoi = new SearchModel(departure, destination, date);
+                    intentSearch.putExtra("maclef", envoi);
                     ItinerarySearchActivity.this.startActivity(intentSearch);
                 }
 

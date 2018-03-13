@@ -46,18 +46,24 @@ public class VehicleActivity extends AppCompatActivity {
                     buttonSend.setEnabled(true);
 
                     buttonSend.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            String stringBrand = editBrand.getText().toString();
-                            String stringModel = editModel.getText().toString();
-                            String stringKilometers = editKilimeters.getText().toString();
-                            int intKilometers = Integer.valueOf(stringKilometers);
-                            VehicleCar descriptionCar = new VehicleCar(stringBrand, stringModel, intKilometers);
+                                    @Override
+                                    public void onClick(View view) {
+                                        String stringBrand = editBrand.getText().toString();
+                                        String stringModel = editModel.getText().toString();
+                                        String stringKilometers = editKilimeters.getText().toString();
+                                        if ( stringBrand.equals("") || stringModel.equals("") || stringKilometers.equals("")){
+                                            Toast.makeText(VehicleActivity.this, "please fill all cases", Toast.LENGTH_SHORT).show();
+                                        }
+                                        else {
+                                            int intKilometers = Integer.valueOf(stringKilometers);
+                                            VehicleCar descriptionCar = new VehicleCar(stringBrand, stringModel, intKilometers);
 
-                            Toast.makeText(VehicleActivity.this, descriptionCar.getDescription(), Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(VehicleActivity.this, descriptionCar.getDescription(), Toast.LENGTH_SHORT).show();
+                                        }
 
-                        }
-                    });
+                                    }
+                                });
+
 
                 }
                 else if (i == 2) {
@@ -73,10 +79,15 @@ public class VehicleActivity extends AppCompatActivity {
                             String stringBrand = editBrand.getText().toString();
                             String stringModel = editModel.getText().toString();
                             String stringHours = editHours.getText().toString();
-                            int intHours = Integer.valueOf(stringHours);
-                            VehicleBoat descriptionBoat = new VehicleBoat(stringBrand, stringModel, intHours);
+                            if ( stringBrand.equals("") || stringModel.equals("") || stringHours.equals("")){
+                                Toast.makeText(VehicleActivity.this, "please fill all cases", Toast.LENGTH_SHORT).show();
+                            }
+                            else {
+                                int intHours = Integer.valueOf(stringHours);
+                                VehicleBoat descriptionBoat = new VehicleBoat(stringBrand, stringModel, intHours);
 
-                            Toast.makeText(VehicleActivity.this, descriptionBoat.getDescription(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(VehicleActivity.this, descriptionBoat.getDescription(), Toast.LENGTH_SHORT).show();
+                            }
                         }
                     });
 
@@ -94,10 +105,15 @@ public class VehicleActivity extends AppCompatActivity {
                             String stringBrand = editBrand.getText().toString();
                             String stringModel = editModel.getText().toString();
                             String stringSpeed = editSpeed.getText().toString();
-                            int intSpeed = Integer.valueOf(stringSpeed);
-                            VehiclePlane descriptionPlane = new VehiclePlane(stringBrand, stringModel, intSpeed);
+                            if ( stringBrand.equals("") || stringModel.equals("") || stringSpeed.equals("")){
+                                Toast.makeText(VehicleActivity.this, "please fill all cases", Toast.LENGTH_SHORT).show();
+                            }
+                            else {
+                                int intSpeed = Integer.valueOf(stringSpeed);
+                                VehiclePlane descriptionPlane = new VehiclePlane(stringBrand, stringModel, intSpeed);
 
-                            Toast.makeText(VehicleActivity.this, descriptionPlane.getDescription(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(VehicleActivity.this, descriptionPlane.getDescription(), Toast.LENGTH_SHORT).show();
+                            }
                         }
                     });
 
